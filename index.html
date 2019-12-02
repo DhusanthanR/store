@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/ico" href="store.png" />
+    <title>Store Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ddc8941b18.js" crossorigin="anonymous"></script>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+        body{
+            overflow-x: hidden;
+        }
+        .space{
+          background: url('mt-953_header_bg01.jpg') no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .first{
+          height: 35px;
+          width: 100%;
+          background:#4e4e4e;
+        }
+        .num{
+          font-family: "Open Sans",sans-serif;
+          margin-left: 62px;
+          font-size:14px;
+          font-weight: 700;
+          line-height: 16.8px;
+        }
+        .num:hover{
+          color:#62BFC4 !important;
+        }
+        ul {
+          margin-right: 80px;
+          text-align: center;
+        }
+        li{
+          text-align: center;
+        }
+        i{
+            color: white;
+            font-size: 15px;
+        }
+        i:hover{
+          color:#62BFC4;
+        }
+        .second{
+          height: 85px;
+          padding: 10px  0 10px 0;
+        }
+        A{
+          padding: 0px 80px;
+          font-size:28px;
+          line-height: 36.4px;
+          height: auto;
+          width: auto;
+          cursor: pointer;
+          box-sizing: border-box;
+          font-family: 'Raleway', sans-serif;
+        }
+         
+        .search{
+       height: 60px;
+       width: 370px;
+       position: relative;
+   }
+   .search input{
+       font-family: "Open Sans";
+       text-decoration: none solid rgb(118,118,118);
+       width: 370px;
+       height: 45px;
+       text-align: center;
+       padding: 5px 22px 5px 22px;
+       box-sizing: border-box;
+       font-size: 12px;
+       line-height: 22px;
+       border: none;
+       outline:none;
+       cursor: text;
+       background-color: #ffffff;
+   }
+
+.fa-search{
+    position:absolute;
+    top:22.5px;
+    bottom: -6.49306px;
+    right: 0px;
+    left: 315px;
+    color: #62BFC4;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    height: 29px;
+    width: 55px;
+    cursor: pointer;
+    transform: matrix(1,0,0,1,0,-14.4444);
+    box-sizing: border-box;
+}
+.shopping{
+  height: 65px;
+  width: 400px;
+  padding:0 15px 0 15px;
+  position: relative;
+  display: flex;
+  min-height: 1px;
+  min-width: auto;
+  max-width: 33.3333%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.user{
+  text-align: right;
+  font: 14px;
+  line-height: 20px;
+  height: 25px;
+  width: 370px;
+  vertical-align: middle;
+  position: relative;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.third{
+  background:rgb(255,255,255,.6);
+  transform: none;
+}
+.last{
+      color: black;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 22px 18px;
+      text-align: center;
+      transform: none;
+      height: 61px;
+    }
+    .last:hover{
+      height: 61px;
+      color: #62BFC4;
+      border-bottom: 5px solid #62BFCA;
+    }
+     #container ul ul{
+       display: none;
+     }
+     #container ul li:hover > ul{
+       display: block;
+       background: #62BFC4;
+       color: #ffffff;
+     }
+     #down{
+       height: 105px;
+       width: 200px;
+       min-width: 200px;
+       padding: 5px 0px;
+       top: 76px;
+       bottom: -121px;
+       right: -135.047px;
+       left: 64.9375px;
+       display: block;
+       z-index: 500;
+       box-sizing: border-box !important;
+       list-style-position: outside;
+       transform: matrix(1,0,0,1,-100,0);
+       text-decoration: none;
+       outline: rgb(67,79,83,);
+     } 
+     #down li a{
+       color: #ffffff;
+       font-family: 'Raleway', sans-serif;
+       font-size: 12px;
+       line-height:17.1429px;
+       text-align:center;
+       height: 32px;
+       width: 200px;
+       padding: 8px 15px;
+       text-align: left !important;
+       cursor: pointer;
+     }
+     #down li a:hover{
+       text-decoration: none;
+       color: #5e9fa7 !important;
+     }
+     #left{
+       height: 73px;
+       width: 200px;
+       padding: 5px 0 5px 0;
+       min-width: 200px;
+       top: -5px;
+       bottom: -37px;
+       right: 205px;
+       left: -205px;
+       margin-left:-250px ;
+       z-index: 500;
+       text-decoration: none;
+       display: block;
+       position: absolute;
+       box-sizing: border-box;
+       transform: matrix(1,0,0,1,0,0);
+     }
+     #left li a{
+       font-family: 'Raleway',sans-serif;
+       font-size: 12px;
+       line-height: 17px;
+       text-align: left;
+       color: #ffffff;
+       height: 31.25px;
+       width: 200px;
+       padding: 8px 15px;
+       position: relative;
+       cursor: pointer;
+     }
+     .fourth{
+       position: relative;
+       display: block;
+       height: 451px;
+       width: 100%;
+       min-width: auto;
+       min-height: auto;
+       box-sizing: border-box;
+     }
+     #list{
+       height: 451px;
+       width: 300px;
+       padding: 0 15px;
+       max-width: 25%;
+       min-height: 1px;
+       min-width: auto;
+       position:relative;
+       display: block;
+       box-sizing: border-box;
+     }
+     #list  ul li {
+       display: flex;
+       position: relative;
+       height: 61.25px;
+       width: 270px;
+       padding:20px;
+     }
+     #title{
+       height: 21.25px;
+       width: 228px;
+       padding: 20px;
+       background-color: #62BFC4;
+       transition: none;
+       box-sizing: border-box;
+     }
+     #title a{
+       font-family: 'Raleway',sans-serif;
+       font-size: 18px;
+       line-height: 21.6px;
+       color: white;
+       display: inline;
+       height: auto;
+       width: auto;
+       text-align: left;
+     }
+     #motolink{
+       background-color:#ffffff;
+       color: #434f53;
+       height: 61.25px;
+       width: 270px;
+       position: relative;
+       display: flex;
+       border-top: 0px solid #f3f3f3;
+       border-right: 0px solid #f3f3f3;
+       border-bottom: 1px solid #f3f3f3;
+       border-left: 0px solid #f3f3f3;
+       padding:12px 20px;
+       box-sizing: border-box;
+       text-align: center;
+     }
+     .para{
+       height: 36.25px;
+       width: 228px;
+       display: block;
+       text-align: left;
+     }
+     .mototext{
+       font-family: 'Raleway',sans-serif;
+       font-size: 14px;
+       line-height: 36.4px;
+       color: #2f2f2f;
+       display: inline;
+       text-align: left;
+       transform: none;
+       height: auto;
+       width: auto;
+     }
+     .mototext:hover{
+       color: #62BFCA;
+     }
+     .col-md-8{
+       height: 451px;
+       width: 900px;
+       padding: 0 15px;
+       max-width: 75%;
+       min-height: 1px;
+       min-width: 75%;
+       position: relative;
+       display: block;
+       transform: none;
+       box-sizing: border-box;
+     }
+     .carousel .carousel-inner{
+       height: 429px;
+       width: 870px;
+       position: relative;
+       overflow: hidden;
+       transform: matrix(1,0,0,1,0,0);
+       transition: all 0s else 0s;
+       box-sizing: border-box;
+     }
+     .carousel-item{
+       height: 429px;
+       width: 870px;
+       background: url('mt-953_home_bg-slider.jpg')no-repeat;
+       background-position: center;
+       background-size: cover;
+       transform: matrix(1,0,0,1,0,0);
+       display:inline-block;
+       box-sizing: border-box;
+     }
+     .caption{
+       text-align: left;
+       height: 202.5px;
+       width: 261px;
+       padding: 10px;
+       max-width: 30%;
+       position: absolute;
+       top: 214.492px;
+       bottom: 12px;
+       right: 548px;
+       left: 61px;
+       transform: matrix(1,0,0,1,0,-101);
+       box-sizing: border-box;
+
+     }
+     .textsystem{
+       font-family: 'Raleway',sans-serif;
+       font-size: 48px;
+       line-height: 48px;
+       text-align: left;
+       color: #2f2f2f;
+       height: 95px;
+       width: 241px;
+       box-sizing: border-box;
+     }
+     .textsystem1{
+      font-family: 'Raleway',sans-serif;
+       font-size: 24px;
+       line-height: 24px;
+       text-align: left;
+       color: #62BFC4;
+       height: 23.75px;
+       width: 241px;
+       box-sizing: border-box;
+     }
+     .textsystem2{
+      font-family: 'Open Sans',sans-serif;
+       font-size: 16px;
+       line-height:22.4px;
+       text-align: left;
+       color: #2f2f2f;
+       height: 63.75px;
+       width: 241px;
+       box-sizing: border-box;
+     }
+     .home1{
+       height: 278.7px;
+       padding: 30px,0,0,0;
+     }
+     #fifth{
+       height: 278px;
+       width: 100%;
+       padding: 30px 0 0 0;
+       background: #ffffff;
+       position: relative;
+       display: block;
+       box-sizing: border-box;
+     }
+     .widget{
+       height: 248px;
+       width: 400px;
+       padding: 0 15px;
+       min-height: 1px;
+       max-width: 33.3333%;
+       min-width: auto;
+       position: relative;
+       display: block;
+     }
+     .fifth{
+       display: flex;
+       position: relative;
+       padding: 30px;
+       margin: 0 0 30px 0;
+       top: 25px;
+       bottom: 25px;
+       right: 25px;
+       left: 25px;
+       height: 218px;
+       width: 370px;
+       transform: none;
+     }
+     .image1{
+       background-color: #ff4141;
+       background-image: url('mt-953_home_banner-1.png');
+       height: 218px;
+       width: 370px;
+     }
+     .image2{
+       background-color: #62BFC4;
+       background-image: url('mt-953_home_banner-2.png');
+       height: 218px;
+       width: 370px;
+     }
+     .image3{
+       background-color: #8482cb;
+       background-image: url('mt-953_home_banner-3.png');
+       height: 218px;
+       width: 370px;
+     }
+     .text{
+       height: 106px;
+       width: 310px;
+       padding: 30px 0 10px 0;
+       min-height: auto;
+       min-width: auto;
+       position:relative;
+       display: block;
+     }
+     b{
+       font-size: 14px;
+       line-height: 22.4px;
+       height: 21.3333px;
+       width: 307.979px;
+       display: block;
+     }
+     h2{
+       font-family: "Open Sans",sans-serif;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 22.4px;
+       color: #ffffff;
+       height:auto;
+       width:auto;
+       display: inline;
+     }
+     strong{
+      font-family: "Open Sans",sans-serif;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 22.4px;
+       color: black;
+       height: auto;
+       width: auto;
+       display: inline;
+     }
+     .led{
+      font-family: "Open Sans",sans-serif;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 22.4px;
+       color: black;
+       height: auto;
+       width: auto;
+       display: inline;
+     }
+     .button{
+       height: 55.6px;
+       width: 310px;
+       text-align: left;
+       padding: 0 0 30px 0;
+       min-height: auto;
+       min-width: auto;
+       position: relative;
+       display: block;
+       top: 0px;
+       left: 0px;
+       bottom: 0px;
+       right: 0px;
+       box-sizing: border-box;
+     }
+     
+     .downspace{
+       padding-bottom:30px; 
+     }
+     .home2{
+       height: 88.75px;
+       width: 1170px;
+       padding: 50px 0;
+     }
+     .home{
+       font-family: 'Raleway',sans-serif;
+       font-size: 24px;
+       font-weight: 600;
+       line-height: 28.7px;
+       height: 28.75px;
+       width: 1168.01px;
+     }
+     .computer{
+       border: none;
+       outline: none;
+       padding: 0 15px 0 15px;
+       box-sizing: border-box;
+     }
+     .topimg{
+       max-width: 100%;
+       max-height: 100%;
+       display: inline;
+       box-sizing: border-box;
+     }
+     .sale{
+       height: 60px;
+       width: 60px;
+       top: 10px;
+       bottom: 200px;
+       right: 200px;
+       left: 20px;
+       display:block;
+       z-index: 2;
+       cursor: pointer;
+       position: absolute;
+       background: #ff4141;
+       border-top-left-radius: 50%;
+       border-top-right-radius: 50%;
+       border-bottom-left-radius: 50%;
+       border-bottom-right-radius: 50%;
+     }
+     .cardt{
+       font-family: 'Raleway',sans-serif;
+       font-size: 12px;
+       font-weight: 600;
+       line-height: 24px;
+       text-align: left;
+       cursor: pointer;
+       
+     }
+     .cardt:hover{
+       color: #62BFC4;
+     }
+     .cardte{
+       color: #ff4141;
+       font-family: "Open Sans",sans-serif;
+       font-size: 18px;
+       font-weight: 700;
+       line-height: 21.6px;
+       text-align:left;
+       
+     }
+     #sale{
+       color: white;
+       font-weight: 600;
+       font-size: 14px;
+       line-height: 60px;
+       text-align: center;
+       font-family: "Open Sans",sans-serif;
+     }
+     .cart{
+       color: #ffffff;
+       background-color: #62BFCA;
+       height: 41px;
+       width: 148.797px;
+       padding: 14px 14px 14px 14px;
+       font-family: "Open Sans",sans-serif;
+       font-size: 13px;
+       font-weight: 700px;
+       letter-spacing: 0.5px;
+       line-height: 13px;
+       float: left;
+       text-align: center;
+       border-top-left-radius: 25px;
+       border-top-right-radius: 25px;
+       border-bottom-left-radius: 25px;
+       border-bottom-right-radius: 25px;
+     }
+     .cart:hover{
+       color: #ffffff;
+       background-color: #ff4141;
+     }
+     .play{
+       height: 498px;
+      padding: 30px 0px;
+      background: url('mt-953_home_bg-1.jpg') no-repeat;
+      background-position: center;
+      background-size: cover;
+     }
+     .col-md-9{
+       height: 438px;
+       width: 900px;
+       padding: 0 15px 0 15px;
+       min-height: 1px;
+       max-width: 75%;
+       min-width: auto;
+       box-sizing: border-box;
+     }
+     .select{
+       height: 418px;
+       width: 870px;
+       margin: 10px 0;
+       padding: 30px;
+       background-color: #8482cb;
+       background-image: url("mt-953_home_banner-4.png" );
+       box-sizing: border-box;
+     }
+     .bord{
+       height: 356.79px;
+       width: 810px;
+       padding: 70px 0 70px 0;
+       min-width: auto;
+       min-height: auto;
+     }
+     .content{
+       height: 216.79px;
+       width: 420px;
+       max-width: 50%;
+       min-height: 1px;
+       min-width: auto;
+       padding: 0 15px 0 15px;
+       box-sizing: border-box;
+       position: relative;
+     }
+     .psvr{
+       height: 131px;
+       width: 390px;
+       padding: 0 1px 0 1px;
+       box-sizing: border-box;
+     }
+     .vr{
+       font-family: 'Raleway',sans-serif;
+       font-size: 48px;
+       line-height: 48px;
+       height: auto;
+       width: auto;
+       display: inline;
+       color: #fff;
+       box-sizing: border-box;
+     }
+     .quality{
+       font-family: "Open Sans",sans-serif;
+       font-size: 18px;
+       font-weight: 700;
+       line-height: 21.6px;
+       height: 62.7273px;
+       width: 388.011px;
+       display: inline;
+       box-sizing: border-box;
+     }
+     .now{
+       height: 45.8807px;
+       width: 390px;
+       padding: 10px 0 10px 0;
+     }
+     .shop{
+       height: 25.8807px;
+       width: 96.3068px;
+       border: 2px solid #ffffff;
+       padding: 6px 14px 6px 14px;
+       border-radius: 0px;
+       position: relative;
+       text-align: center;
+     }
+     .shop h5{
+       font-family: "Open sans",sans-serif;
+       font-size: 11px;
+       font-weight: 700;
+       letter-spacing: 0.5px;
+       text-align: center;
+       line-height: 11px;
+       color:#ffffff;
+       height: auto;
+       width: auto;
+     }
+     .shop:hover{
+       background: rgb(255,255,255,.4);
+     }
+     .columnmoto{
+       height: 438px;
+       width: 300px;
+       padding: 0 15px 0 15px;
+       min-height: 1px;
+       max-width: 25%;
+       min-width: auto;
+       box-sizing: border-box;
+     }
+     .banner{
+       height: 414.4px;
+       width: 270px;
+       margin: 10px 0 10px 0;
+       padding: 30px 25px;
+       background-color: #62bfc4;
+       background-image: url('mt-953_home_banner-5.png');
+       box-sizing: border-box;
+     }
+     .empty{
+       width: 220px;
+       height: 187px;
+       padding: 70px 0 30px 0;
+       min-width: auto;
+       min-height: auto;
+     }
+     .blendar{
+       height: 124px;
+       width: 220px;
+       padding: 70px 0 10px 0;
+       min-height: auto;
+       min-width: auto;
+     }
+     .blendar h3{
+       font-family: "Open sans",sans-serif;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 22.4px;
+       text-align: center;
+       color: white !important;
+       box-sizing: border-box;
+     }
+     .blendar p{
+      font-family: "Open sans",sans-serif;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 22.4px;
+       text-align: center;
+       color: black;
+
+     }
+     #now{
+       height: 56px;
+       width: 220px;
+       padding: 0 0 30px 0;
+       min-height: auto;
+       min-width: auto;
+       text-align: center;
+     }
+     #shop{
+       height: 25.8807px;
+       width: 96.3281px;
+       border: 2px solid #ffffff;
+       padding: 6px 14px 6px 14px;
+       border-radius: 0px;
+       text-align: center;
+     }
+     #shop h5{
+       font-family: "Open sans",sans-serif;
+       font-size: 11px;
+       font-weight: 700;
+       letter-spacing: 0.5px;
+       text-align: center;
+       line-height: 11px;
+       color:#ffffff;
+       height: auto;
+       width: auto;
+     }
+     #shop:hover{
+       background: rgb(255,255,255,.4);
+     }
+     .react{
+       height: 531.465px;
+       width: 1200px;
+       padding: 0 15px 0 15px;
+       min-height: 1px;
+       max-width: 100%;
+       min-width: auto;
+     }
+     .topimg{
+       max-height: 100%;
+       max-width: 100%;
+     }
+     .skyblue{
+       height: 274px;
+       background: #f3f3f3;
+     }
+     .skyvilote{
+       padding: 0 15px 0 15px;
+       height: 274px;
+       width: 1200px;
+       max-width: 86.7%;
+     }
+     .sky{
+       padding: 30px;
+       height: 274px;
+       width: 390px;
+       background-color: rgb(144, 215, 235);
+     }
+     .blue{
+      padding: 30px;
+       height: 274px;
+       width: 390px;
+       background-color: rgb(66, 173, 215);
+     }
+     .violet{
+      padding: 30px;
+       height: 274px;
+       width: 390px;
+       background-color: #8482cb;
+     }
+     .widgett{
+       padding: 70px 0;
+       height: 214px;
+       width: 330px;
+       min-height: auto;
+       min-width: auto;
+       z-index: 2;
+     }
+     .system6{
+       height: 46px;
+       width: 328px;
+       z-index: 2;
+       text-align: left;
+     }
+     .text1{
+       font-family: 'Raleway',sans-serif;
+       font-size: 36px;
+       font-weight: 600;
+       line-height: 46.8px;
+       height: auto;
+       width: auto;
+       cursor: pointer;
+       z-index: 2;
+     }
+     .text1:hover{
+       color: black;
+     }
+     .system8{
+       height: 28px;
+       width: 328px;
+       z-index: 2;
+       text-align: left;
+     }
+     .text2{
+      font-family: 'Raleway',sans-serif;
+       font-size: 24px;
+       font-weight: 600;
+       line-height: 28.8px;
+       height: auto;
+       width: auto;
+       color: #ffffff;
+       cursor: pointer;
+       z-index: 2;
+     }
+     .fullll
+     {
+       height: 627px;
+       width: auto;
+       padding: 30px 0px;
+     }
+     .half{
+       height: 567px;
+       width: 1200px;
+       max-width: 100%;
+       min-height: 1px;
+       min-width: auto;
+
+     }
+     #card{
+       border-radius:none;
+       outline: none;
+       border: none;
+       box-sizing: border-box;
+     }
+     .mt-953_home{
+       border-radius: none;
+       box-sizing: border-box;
+     }
+     .top{
+       font-family: 'Raleway',sans-serif;
+       font-size: 14px;
+       font-weight: 600;
+       line-height: 21px;
+       display: inline;
+       height: 21px;
+       width: 368px;
+       cursor: pointer;
+       color: #2f2f2f;
+     }
+     .top:hover{
+       color: #62bfc4;
+     }
+     .comfort{
+       font-family: 'Open Sans',sans-serif;
+       font-size: 12px;
+       line-height: 18px;
+       height: 54px;
+       width: 368px;
+       color: #767676;
+     }
+     .more{
+       height: 56px;
+       width: 370px;
+       padding: 0 0 30px 0;
+     }
+     .read{
+      font-family: 'Open Sans',sans-serif;
+       font-size: 11px;
+       font-weight: 700;
+       letter-spacing: 0.5px;
+       height: 21px;
+       width: 100.063px;
+       text-align:center ;
+       background: #62BFCA;
+       padding: 6px 14px 6px 14px;
+       border-radius: none;
+       border: none;
+       color: #fff;
+       box-sizing: border-box;
+     }
+     .read:hover{
+      color: #fff;
+       background: #ff4141;
+     }
+     .blck{
+       color: white;
+       background: #434343;
+       height: 397px;
+       padding: 70px 0  30px 0;
+     }
+     .heading{
+       font-family: 'Raleway',sans-serif;
+       font-size: 18px;
+       font-weight: 600;
+       line-height: 23.4px;
+       color: white;
+       text-decoration: none;
+       list-style: none; 
+     }
+     .highlight{
+       font-family: "Open Sans",sans-serif;
+       font-size: 12px;
+       font-weight: 600;
+       line-height: 28.8px;
+       color: #767676;
+       cursor: pointer;
+     }
+     .highlight:hover{
+       color: #62BFC4;
+     }
+    </style>
+</head>
+<body>
+  <div class="space">
+   <nav class="navbar navbar-expand-lg first">
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="nav-link mr-auto num" style=" color: white;" href="#">(123) 456-7890</a>
+          <ul class="navbar-nav justify-content-end" id="end">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>  </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>  </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#"><i class="fab fa-google-plus-g"></i></a>  </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="row second">
+      <div class="col-md-4 justify-content-end">
+        <A class="lign-text-top"><img src="store.png">Electrolux</A></div>
+      <div class="col-md-4 justify-content-center search">
+        <input type="text"><i class="fas fa-search"></i></div>
+      <div class="col-md-4shopping">
+        <div class="justify-content-end user">
+          <i class="fas fa-shopping-cart align-top" style="color: turquoise;"></i>
+          <p style="font-size: 12px; align-baseline">My Cart(0)</p>
+          <i class="fas fa-user align-text-bottom" style="color: turquoise;"></i>
+        </div>
+      </div>
+    </div>
+    <div class="third">
+      <div class="bar " id="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link last" href="#">LAPTOPS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link last" href="#">CELL PHONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link last" href="#">AUDIO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link last" href="#">TABLES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link last" href="#">TVS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link last" href="#">WEARABLE TECH</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a data-toggle="dropdown" class="nav-link last dropdown-toggle"   href="#">COMPUTER & OFFICE <!--  <i  class="fas fa-chevron-down"></i>--></a> 
+                <ul class="dropdown-menu" id="down">
+                  <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle" >GPS & NAVIGATION</a>
+                    <ul class="dropdown-menu #left">
+                      <li><a href="#">ACCESSORIES</a></li>
+                      <li><a href="#">AUTO GPS UNITS</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">COMPUTERS & ACCESSORIES</a></li>
+                  <li><a href="#">CAMERS & ACCESSORIES</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link last" href="#">SMART HOME</a>
+            </li>
+          </ul>
+    </div>
+  </div>
+  <br>
+    <div class="container fourth">
+      <div class="row">
+      <div class="col-md-4" id="list">
+          <ul class="nav flex-column">
+              <li class="nav-item" id="title">
+                <a class="nav-link">INFORMATION</a>
+              </li>
+              <li class="nav-item" id="motolink">
+                <p class="para"><a class="nav-link mototext" href="#">About Us</a></p>
+              </li>
+              <li class="nav-item" id="motolink">
+                <p class="para"><a class="nav-link mototext" href="#">Delivery Information</a></p>
+              </li>
+              <li class="nav-item" id="motolink">
+                <p class="para"><a class="nav-link mototext" href="#">Privacy Policy</a></p>
+              </li>
+              <li class="nav-item" id="motolink">
+                  <p class="para"><a class="nav-link mototext" href="#">Terms & Conditions</a></p>
+              </li>
+              <li class="nav-item" id="motolink">
+                  <p class="para"><a class="nav-link mototext" href="#">Contact Us</a></p>
+              </li>
+              <li class="nav-item" id="motolink">
+                  <p class="para"><a class="nav-link mototext" href="#">Blog</a></p>
+              </li>
+            </ul>
+      </div>
+      <div class="col-md-8">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="mt-953_home_slide-1.png" class="d-block w-100" height= "429px" width=" 870px" >
+                    <div class="caption">
+                    <p class="textsystem">iPhone 7</p>
+                    <p class="textsystem1">5.5-inch display</p>
+                    <p class="textsystem2">From $37.41/mo. with the iPhone Upgrade Program.
+                    Or pay now from $769.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="mt-953_home_slide-2.png" class="d-block w-100" height= "429px" width=" 870px" >
+                  <div class="caption">
+                  <p class="textsystem">Samsung</p>
+                  <p class="textsystem1">Galaxy S7</p>
+                  <p class="textsystem2">New Gear VR & Screen Replacement Offer - Rs 50,900 + Rs 1990* + Rs. 990*</p>
+                </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="mt-953_home_slide-3.png" class="d-block w-100" height= "429px" width=" 870px">
+                <div class="caption">
+                  <p class="textsystem">MAVIC PRO</p>                  
+                <p class="textsystem1">Personal Drone</p>
+                <p class="textsystem2">FLIGHT PERFORMANCE Up to 27 minutes of flight. 40mph (65kph) in Sport Mode</p>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+    <div class="container home1">
+      <div class="row">
+      <!-- <div id="fifth"> -->
+        <div class="col-md-4 ">
+          <div class="fifth image1">
+            <div class="text">
+              <b><h2>George Foreman</h2></b>
+              <b><strong>GRP4800R</strong></b>
+              <b><p class="led">4-in-1 Evolve Grill</p></b>
+              <div class="now">
+                  <a href="#" class="btn shop"><h5>SHOP NOW</h5></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="fifth image2">
+              <div class="text">
+               <b> <h2>George Foreman</h2></b>
+               <b><strong>GRP4800R</strong></b>
+               <b><p class="led">4-in-1 Evolve Grill</p></b>
+               <div class="now">
+                  <a href="#" class="btn shop"><h5>SHOP NOW</h5></a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="fifth image3">
+              <div class="text">
+                <b><h2>George Foreman</h2></b>
+                <b><strong>GRP4800R</strong></b>
+                <b><p class="led">4-in-1 Evolve Grill</p></b>
+                <div class="now">
+                    <a href="#" class="btn shop"><h5>SHOP NOW</h5></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="container downspace">
+      <div class="home2">
+      <h1 class="home">Home Electronics</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product08.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+                <div class="sale">
+                    <p id="sale">Sale!</p>
+                  </div>
+                <div class="card-body">
+                  <h5 class="card-title cardt">VIXIA HF R500 Digital Camcorder</h5>
+                  <p class="card-text cardte">$250.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product09.jpg" class="card-img-top topimg" height="270px" width="270px" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title cardt">28-Inch 720p 60Hz LED TV</h5>
+                  <p class="card-text cardte">$2,000.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product10.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+                <div class="card-body">
+                  <h5 class="card-title cardt">48-Inch 1080p 60Hz Smart LED TV</h5>
+                  <p class="card-text cardte">$550.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product11.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+                <div class="card-body">
+                  <h5 class="card-title cardt">65-Inch 4K Ultra HD Smart LED TV</h5>
+                  <p class="card-text cardte">$3,000.0</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product12.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+                <div class="sale">
+                    <p id="sale">Sale!</p>
+                  </div>
+                <div class="card-body ">
+                  <h5 class="card-title cardt">ESO 70D Digital SLR Camera</h5>
+                  <p class="card-text cardte">$1,300.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product13.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+                <div class="sale">
+                    <p id="sale">Sale!</p>
+                  </div> 
+                <div class="card-body">
+                  <h5 class="card-title cardt">Master Iron with Anti-Drip System</h5>
+                  <p class="card-text cardte">$40.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product14.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+                <div class="sale">
+                    <p id="sale">Sale!</p>
+                  </div> 
+                <div class="card-body">
+                  <h5 class="card-title cardt">Air Conditioner w/Full-Function</h5>
+                  <p class="card-text cardte">$270.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="card computer" style="width: 300px;">
+                <img src="mt-953_product17.jpg" class="card-img-top topimg" alt="..."  height="270px" width="270px">
+                <div class="sale">
+                    <p id="sale">Sale!</p>
+                  </div> 
+                <div class="card-body">
+                  <h5 class="card-title cardt">Wireless Smartphone Video Capture</h5>
+                  <p class="card-text cardte">$600.00</p>
+                  <a href="#" class="btn cart">ADD TO CART<i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="play">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="select">
+            <div class="bord">
+            <div class="content">
+              <div class="psvr">
+                  <h1 class="vr">PlayStation VR</h1>
+                  <br><br>
+                  <p class="quality">Affordable introduction to quality VR,offering great games and immersive experiences.</p>
+              </div>
+              <div class="now">
+              <a href="#" class="btn shop"><h5>SHOP NOW</h5></a>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4 columnmoto">
+          <div class="banner">
+            <div class="empty">
+            </div>
+              <div class="blender">
+                <h3>Nutri Ninja Blender</h3>
+                <p>Duo with Audio-iQ (BL642)</p>
+              </div>
+              <div id="now">
+                  <a href="#" class="btn " id="shop"><h5>SHOP NOW</h5></a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container downspace react">
+      <div class="home2">
+          <h1 class="home">Specials</h1>
+          </div>
+  <div class="row">
+      <div class="col-md-3">
+          <div class="card computer" style="width: 300px;">
+              <img src="mt-953_product14.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+              <div class="sale">
+                  <p id="sale">Sale!</p>
+                </div>
+              <div class="card-body">
+                <h5 class="card-title cardt">Air Conditioner W/Full-Function</h5>
+                <p class="card-text cardte">$270.00</p>
+                <a href="#" class="btn cart">ADD TO CART   <i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card computer" style="width: 300px;">
+              <img src="mt-953_product03.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+              <div class="sale">
+                  <p id="sale">Sale!</p>
+                </div> 
+              <div class="card-body">
+                <h5 class="card-title cardt">Blue-Ray Home Theater System</h5>
+                <p class="card-text cardte">$350.00</p>
+                <a href="#" class="btn cart">ADD TO CART  <i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card computer" style="width: 300px;">
+              <img src="mt-953_product12.jpg" class="card-img-top topimg" alt="..." height="270px" width="270px">
+              <div class="sale">
+                  <p id="sale">Sale!</p>
+                </div> 
+              <div class="card-body">
+                <h5 class="card-title cardt">ESO 70D Digital SLR Camera</h5>
+                <p class="card-text cardte">$1,300.00</p>
+                <a href="#" class="btn cart">ADD TO CART  <i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card computer" style="width: 300px;">
+              <img src="mt-953_product05.jpg" class="card-img-top topimg" alt="..."  height="270px" width="270px">
+              <div class="sale">
+                  <p id="sale">Sale!</p>
+                </div> 
+              <div class="card-body">
+                <h5 class="card-title cardt">Hard Flooe Expert Deluxe Canister</h5>
+                <p class="card-text cardte">$96.00</p>
+                <a href="#" class="btn cart">ADD TO CART  <i style="color: #fff !important;" class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="skyblue">
+  <div class="container skyvilote">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sky">
+        <!-- <img src="mt-953_home_icon-1.png" class="mt-953_home"  > -->
+        <div class="widgett" style="background:url('mt-953_home_icon-1.png') no-repeat;">
+        <div class="system6"><h2 class="text1">Free Shipping</h2></div>
+        <div class="system8"><h4 class="text2">on order over $100</h4></div>
+      </div>
+      </div>
+    </div>
+      <div class="col-md-4">
+        <div class="blue">
+          <!-- <img src="mt-953_home_icon-2.png" class="mt-953_home"> -->
+          <div class="widgett" style="background:url('mt-953_home_icon-2.png') no-repeat;">
+          <div class="system6"><h2 class="text1">Fast Delivery</h2></div>
+          <div class="system8"><h4 class="text2">WorldWide</h4></div>
+    </div>
+  </div>
+  </div>
+      <div class="col-md-4">
+        <div class="violet">
+            <!-- <img src="mt-953_home_icon-3.png"  class="mt-953_home"> -->
+          <div class="widgett" style="background:url('mt-953_home_icon-3.png') no-repeat;">
+          <div class="system6"><h2 class="text1">Big Choice</h2></div>
+          <div class="system8"><h4 class="text2">of Products</h4></div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<div class="fullll">
+  <div class="container half">
+      <div class="home2">
+          <h1 class="home">Latest from the Blog</h1>
+          </div>
+    <div class="row">
+      <div class="col-md-4">
+          <div class="card" id="card" style="width: 370px;">
+              <img src="mt-953_home_img01.jpg" class="card-img-top mt-953_home" alt="..." height="270px" width="369px">
+              <div class="card-body" style="float: left;">
+                <h5 class="card-title top">Must have electronic accessories</h5>
+                <p class="card-text comfort">Comfort is a very important thing nowadays because it is a condition of satisfaction and calmness. It is clear that our way of life must be as comfort...</p>
+                <a href="#" class="btn read">READ MORE</a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card" id="card" style="width: 370px;">
+              <img src="mt-953_home_img02.jpg" class="card-img-top mt-953_home" alt="..." height="270px" width="369px">
+              <div class="card-body" style="float: left;" >
+                <h5 class="card-title top">Top adivce to choose the right computers</h5>
+                <p class="card-text comfort" >Here you can find something more than just home electronics; you can find real comfort and satisfaction here! Our goods are the combination of perfect...</p>
+                <a href="#" class="btn read">READ MORE</a>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card " id="card" style="width: 370px;">
+              <img src="mt-953_home_img03.jpg" class="card-img-top mt-953_home" alt="..." height="270px" width="369px">
+              <div class="card-body" style="float: left;">
+                <h5 class="card-title top">The lastest opinions and new on cameras</h5>
+                <p class="card-text comfort">Our manufacturers and vendors provide only new technologies and it is very important because nowadays we see a furious development of electronics...</p>
+                <a href="#" class="btn read">READ MORE</a>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="blck">
+      <!--final list links-->
+<div class="container end row">
+  <div class="row_one col-md-3 col-sm-12">
+      <ul class="lists">
+          <li class="heading">Categories</li>
+          <li id="highlight">Laptops </li>
+          <li id="highlight">Cell Phones</li>
+          <li id="highlight">Audio</li>
+          <li id="highlight">Tablets</li>
+          <li id="highlight">TVs</li>
+          <li id="highlight">wearable tech</li>
+          <li id="highlight">Computers & office</li>
+          <li id="highlight">Smart Home</li>  
+        </ul>
+  </div>
+  <div class="row_two col-md-2 col-sm-12 ">
+      <ul class="lists">
+          <li class="heading">Information</li>
+          <li id="highlight">Abouts Us</li>
+          <li id="highlight">Delivery Information</li>
+          <li id="highlight">Privacy Policy</li>
+          <li id="highlight">Tems & Conditions</li>
+          <li id="highlight">Countact Us</li>
+          <li id="highlight">Blog</li>
+          </ul>
+  </div>
+  <div class="row_three col-md-2 col-sm-12 ">
+      <ul class="lists">
+          <li class="heading">Contact us</li>
+          <li id="highlight">My Company Glasgow D04 89GR</li>
+          <li id="highlight">(123) 456-7890</li>
+          <li id="highlight">mail@demonlink.org</li>
+          <li id="highlight">7 Days a week forms 9:00 am to 7:00 pm</li>
+          </ul>  
+  </div>
+  <div class="row_four col-md-3 col-sm-12 ">
+    <ul class="lists">
+      <li class="Newsletter"></li>
+      <li><input type="text" placeholder="Email*"></li>
+      <li></li>
+    </ul>
+  
+  </div>
+  <div class="row_five col-md-2 col-sm-12 " >
+  <ul class="lists">
+  <li class="heading" style="width: 300px;">Contact us</li>
+  <li id="vol"><i class="fas fa-phone-volume"> </i> <p id="number call_"> 1-800-234-5677</p></li>
+  <li id="addr_"><i class="fas fa-map"> </i> <p id="add">4578 MARMORA ROAD,GLASGOW D04 89 GR.</p>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer">
+  <p class="end_text">Natural Food — Multipurpose WP Theme with Elementor Page Builder. © 2019 <span>ZEMEZ</span> Inc.</p>
+  </div>
+  
+  </div>
+</body>
+</html>
